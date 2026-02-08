@@ -145,12 +145,12 @@ Now, let’s see how we can use these factories in the client code.
 
 
 ```
-    public class CloudClient {
+    public class abstractdesignpattern.CloudClient {
     private VirtualMachine vm;
     private DataBase db;
     private Storage storage;
     
-        public CloudClient(CloudServiceFactory factory) {
+        public abstractdesignpattern.CloudClient(CloudServiceFactory factory) {
             this.vm = factory.createVirtualMachine();
             this.db = factory.createDatabase();
             this.storage = factory.createStorage();
@@ -164,13 +164,13 @@ Now, let’s see how we can use these factories in the client code.
     
         public static void main(String[] args) {
             CloudServiceFactory awsFactory = new AWSCloudServiceFactory();
-            CloudClient awsClient = new CloudClient(awsFactory);
+            abstractdesignpattern.CloudClient awsClient = new abstractdesignpattern.CloudClient(awsFactory);
             awsClient.run();
     
             System.out.println("------------");
     
             CloudServiceFactory azureFactory = new AzureCloudServiceFactory();
-            CloudClient azureClient = new CloudClient(azureFactory);
+            abstractdesignpattern.CloudClient azureClient = new abstractdesignpattern.CloudClient(azureFactory);
             azureClient.run();
         }
     }

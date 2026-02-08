@@ -1,7 +1,6 @@
+package abstractdesignpattern;
+
 import abstractdesignpattern.factory.CloudServiceFactory;
-import abstractdesignpattern.Database;
-import abstractdesignpattern.Storage;
-import abstractdesignpattern.VirtualMachine;
 import abstractdesignpattern.factory.AWSCloudServiceFactory;
 import abstractdesignpattern.factory.AzureCloudServiceFactory;
 
